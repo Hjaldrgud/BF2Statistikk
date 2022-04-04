@@ -8,7 +8,7 @@ public class PlayerModel {
     private int deaths;
     private int captures;
 
-    //Just a basic start. It still misses many columns that is saved in the database.
+    //Just a basic start. It misses many columns that is saved the player table.
     public PlayerModel(String nickname, int score, int roundsPlayed, int kills, int deaths, int captures) {
         this.nickname = nickname;
         this.score = score;
