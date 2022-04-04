@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>main</groupId>
-  <artifactId>BF2StatViewer</artifactId>
+  <artifactId>BF2StatsViewer</artifactId>
   <version>skeleton</version>
-  <name>BF2StatViewer</name>
+  <name>BF2StatsViewer</name>
   <packaging>war</packaging>
 
   <properties>
