@@ -14,20 +14,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import html.Html;
-import models.UserModel;
+import models.PlayerModel;
 import utilities.DBUtils;
 
-@WebServlet(name = "GetUserServlet", value = "/GetUserServlet")
-public class GetUserServlet extends HttpServlet {
+@WebServlet(name = "GetPlayerServlet", value = "/GetPlayerServlet")
+public class GetPlayerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-        String uname = request.getParameter("uname");
+        String pname = request.getParameter("pname");
         PrintWriter out = response.getWriter();
 
         try {
-            UserModel model = getUser(uname, out);
-            double killdeathRatio = getKDratio(model.getKills(), model.getDeaths());
+            PlayerModel model = getPlayer(pname, out);
+            double killdeathRatio = getRatio(model.getKills(), model.getDeaths());
 
             Html.Start(out, "Player stats:");
             out.println("Ingame nick: " + model.getNickname() + "<br/>");
@@ -52,7 +52,7 @@ public class GetUserServlet extends HttpServlet {
 
     }
 
-    private UserModel getUser(String uname, PrintWriter out) throws SQLException {
+    private PlayerModel getPlayer(String pname, PrintWriter out) throws SQLException {
         Connection db = null;
         try {
             db = DBUtils.getINSTANCE().getConnection(out);
@@ -62,12 +62,12 @@ public class GetUserServlet extends HttpServlet {
 
         String query3 = "SELECT name, score, rounds, kills, deaths, captures  FROM player WHERE name = ?";
         PreparedStatement statement = db.prepareStatement(query3);
-        statement.setString(1, uname);
+        statement.setString(1, pname);
         ResultSet rs = statement.executeQuery();
-        UserModel model = null;
+        PlayerModel model = null;
         while (rs.next()) {
             model =
-                new UserModel(
+                new PlayerModel(
                     rs.getString("name"),
                     rs.getInt("score"),
                     rs.getInt("rounds"),
@@ -80,8 +80,8 @@ public class GetUserServlet extends HttpServlet {
     }
 
     //To circumvent int not wanting to give decimals. Also cuts off too many decimals.
-    double getKDratio(float kills, float deaths) {
-        return Math.floor(kills / deaths);
+    double getRatio(float a, float b) {
+        return (Math.round((a/b)*100.0)/100.0);
     }
 
 }

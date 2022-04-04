@@ -1,6 +1,6 @@
 package models;
 
-public class UserModel {
+public class PlayerModel {
     private String nickname;
     private int score;
     private int roundsPlayed;
@@ -9,7 +9,7 @@ public class UserModel {
     private int captures;
 
     //Just a basic start. It still misses many columns that is saved in the database.
-    public UserModel(String nickname, int score, int roundsPlayed, int kills, int deaths, int captures) {
+    public PlayerModel(String nickname, int score, int roundsPlayed, int kills, int deaths, int captures) {
         this.nickname = nickname;
         this.score = score;
         this.roundsPlayed = roundsPlayed;

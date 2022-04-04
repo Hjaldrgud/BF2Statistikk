@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
-    <link rel="stylesheet" href="/Battlefield2Statistikk/Resources/Stylesheet/styles.css">
+    <link rel="stylesheet" href="/BF2StatsViewer/Resources/Stylesheet/styles.css">
 </head>
 <body>
 <h1><%= "Hello World! JSP" %>

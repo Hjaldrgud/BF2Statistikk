@@ -1,28 +1,27 @@
-# Java base skeleton for a Battlefield 2 Statistics/Leaderboards  web application
-Modified version of Trym's skeleton to serve as a skeleton for a bf2s.com like web application with stats from a local Battlefield 2 gamespy server.
+# Java base skeleton for a Battlefield 2 Statistics/Leaderboards web application
+A Modified version of Trym/Nosp1's skeleton to serve as a base for a bf2s.com-like statistics web application with stats from a local Battlefield 2 gamespy server.
 <br>
 
 ## Notice
 I ditched Docker and all that. I personally could not find a way to link up with the existing 
-BF2-database when using Docker. I'm sure it's possible, I just couldn't manage to do it. 
+BF2-database when using Docker. I'm sure it's possible, I just couldn't manage to do it. Instead Xampp is used. This repo has no official connections to bf2statistics.com. It is simply meant to be a base for gaining further servlet/jsp/database/html experience. 
 
 ## How to use
 ### Prerequisites:
--A copy of Battlefield 2 version 1.41 or 1.5 (1.41 better with bots)<br>
--Battlefield 2 Dedicated Server<br>
--XAMPP (Version 7.4.28)<br>
--BF2Statistics Web Edition v3
+-A copy of Battlefield 2 version 1.41 or 1.5 (1.41 has better bot support)<br>
+-Battlefield 2 Dedicated Server version 1.41 or 1.5 (depending on your bf2 version)<br>
+-XAMPP Version 7.4.28 (version 8.x is not advisable) <br>
+-BF2Statistics Web Edition v3.1.0 (download .zip containing everything you need from here https://github.com/BF2Statistics/ASP/releases, but use the more updated asp folder from here: https://github.com/BF2Statistics/ASP)
 
 ##### 1. Install Battlefield 2 Dedicated Server, XAMPP and BF2Statistics Web Edition.    
-Watch this video:<br>
+For tutorial watch this video:<br>
 https://youtu.be/WpNlfql3wPw <br>
 and/or written guide:<br>
 https://bf2statistics.com/threads/bf2statistics-web-edition-tutorial-and-tips.3022/
 
 ##### 2. Install MySQL and Apache as services in Xampp control panel
 Open xampp control panel and tick off services for Apache and MySQL.
-It makes it so you don't need to manually open xampp and start Apache and MySQL everytime you want to play or make the web application able to contact the DB. 
-
+It makes it so you don't need to manually open xampp and start Apache and MySQL everytime you want to play or make the web application able to contact the DB.
 
 ##### 3. Open this project in IntelliJ.
 
@@ -48,20 +47,20 @@ Alternatively you can use "bf2statslogger" as user and "bf2" as password as in t
 -Hit the folder icon on "Tomcat Home" and navigate to Xampp's tomcat folder. This is mine "C:\Spillting\Battlefield_2_Server-greier\XAMPP\tomcat" 
 -Name it with the tomcat version (or it does so automatically?) and click ok<br>
 -Select the tomcat version you just made in "application server"<br>
--Choose what you want the url to be. Mine is "http://localhost:8080/Battlefield2Statistikk/" <br>
--Most likely there will be a red light bulb with and the text "Warning: No artifacts marked for deployment" click it "fix".<br>
--select "Battlefield2Statistikk:war exploded"<br>
--In the "Application context", shorten it down to just "/Battlefield2Statistikk" (or whatever suffix you gave the URL two steps ago.)<br>
+-Choose what you want the url to be. Mine is "http://localhost:8080/BF2StatsViewer/" <br>
+-There will be a red light bulb with and the text "Warning: No artifacts marked for deployment" click it "fix".<br>
+-Two choices will come up: select "Battlefield2Statistikk:war exploded"<br>
+-In the "Application context", shorten it down to just "/BF2StatsViewer" (or whatever suffix you gave the URL two steps ago.)<br>
 
 ##### 6. Start the tomcat server in IntelliJ
 -click "services" in the menu down left<br>
 -select the tomcat server and hit the green "run" button
 -Wait for it to build the application.
 
-##### 7. Test out the skeleton at http://localhost:8080/Battlefield2Statistikk/ (if you did not change the url)
+##### 7. Test out the skeleton at http://localhost:8080/BF2StatsViewer/ (if you did not change the url)
 -IntelliJ should automatically launch your browser with this link<br>
--I would advise to add tomcat to "services"-tool window (ALT+8) for fast rebuilding 
-<br>
+-You can add tomcat to "services"-tool window (ALT+8) for fast rebuilding or use hotkeys SHIFT+F10<br>
+-If using war_exploded, you can apparently change the code without rebuilding. I haven't checked it, so you should google to learn more about it. <br>
 
 <br>
 
