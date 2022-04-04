@@ -7,11 +7,10 @@ public class Html {
         out.println("<html>");
         out.println("<head>");
         out.println("<title>"+title+"</title>");
-        out.println("<link rel=\"stylesheet\" href=\"/Battlefield2Statistikk/Resources/Stylesheet/styles.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"/BF2StatsViewer/Resources/Stylesheet/styles.css\">");
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>"+title+"</h1>");
-        //out.println("<body background=\"/Battlefield2Statistikk/Resources/Images/Battlefield2LogoBig.png\">");
     }
 
     public static void EndBasic(PrintWriter out) {
@@ -28,7 +27,8 @@ public class Html {
         out.println("<p><a href=\"https://stats.lost-soldiers.org/?pid=235450654\">(bf2s version)</a> </p>");
         out.println("<p><a href=\"https://stats.playfh2.net/stats/playerstats/464842560\">(playfh2 version)</a> </p>");
         out.println("<h3>If you're also interested in modding BF2 check out these sites: </h3>");
-        out.println("<p><a href=\"https://bf2statistics.com/\">(bf2statistics. The guys who made it possible to play this version of local BF2)</a> </p>");
+        out.println("<p><a href=\"https://bf2statistics.com/\">(bf2statistics web site. The guys who made it possible to play this version of local BF2)</a> </p>");
+        out.println("<p><a href=\"https://github.com/BF2Statistics\">(bf2statistics's GitHub. The guys who made it possible to play this version of local BF2)</a> </p>");
         out.println("<p><a href=\"https://www.moddb.com/games/battlefield-2/\">(moddb. Downloads for mods and addons)</a> </p>");
         out.println("<p><a href=\"http://battlefieldsingleplayer.com/\">(battlefieldsingleplayer. The forum is the StackOverload of BF2. Not very active nowdays)</a> </p>");
         out.println("<p><a href=\"https://discord.gg/eFcgYKfe\">(refactor 2 modding. This Discord for modding BF2. Very active)</a> </p>");
