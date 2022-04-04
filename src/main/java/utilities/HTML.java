@@ -1,8 +1,8 @@
-package html;
+package utilities;
 
 import java.io.PrintWriter;
 
-public class Html {
+public class HTML {
     public static void Start(PrintWriter out, String title) {
         out.println("<html>");
         out.println("<head>");

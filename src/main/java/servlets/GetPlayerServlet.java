@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import html.Html;
+import utilities.HTML;
 import models.PlayerModel;
 import utilities.DBUtils;
 
@@ -29,7 +29,7 @@ public class GetPlayerServlet extends HttpServlet {
             PlayerModel model = getPlayer(pname, out);
             double killdeathRatio = getRatio(model.getKills(), model.getDeaths());
 
-            Html.Start(out, "Player stats:");
+            HTML.Start(out, "Player stats:");
             out.println("Ingame nick: " + model.getNickname() + "<br/>");
             out.println("Total score: " + model.getScore() + "<br/>");
             out.println("Rounds played: " + model.getRoundsPlayed() + "<br/>");
@@ -40,7 +40,7 @@ public class GetPlayerServlet extends HttpServlet {
             if (killdeathRatio > 3) {
                 out.print("<br/><h3>Certified 1337 player ;)</h3>");
             }
-            Html.EndBasic(out);
+            HTML.EndBasic(out);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
