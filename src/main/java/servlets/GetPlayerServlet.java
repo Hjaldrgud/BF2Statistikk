@@ -79,7 +79,7 @@ public class GetPlayerServlet extends HttpServlet {
         return model;
     }
 
-    //To circumvent int not wanting to give decimals. Also cuts off too many decimals.
+    //To circumvent int not wanting to give decimals. Also limits decimals to two.
     double getRatio(float a, float b) {
         return (Math.round((a/b)*100.0)/100.0);
     }
