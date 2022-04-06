@@ -20,7 +20,7 @@ public class HelloServlet extends HttpServlet {
         out.println("  <input type='text' name='pname'/>");
         out.println("  <input type='submit' />");
         out.println("</form>");
-        out.println("<p>This query finds a player in your private Battlefield 2 statistics database and lists up some of the player's stats (I have not included every player column in the model.)</p>");
+        out.println("<p>This query finds a player in your private Battlefield 2 statistics database and lists up some(not all..) of the player's stats.</p>");
         HTML.MiniTutorial(out);
         HTML.EndBasic(out);
     }

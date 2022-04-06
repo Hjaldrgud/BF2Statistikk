@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="/BF2StatsViewer/Resources/Stylesheet/styles.css">
 </head>
 <body>
-<h1><%= "Hello World! JSP" %>
-</h1>
+<h1><%= "Hello World! JSP" %></h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 </body>

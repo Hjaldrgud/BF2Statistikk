@@ -20,8 +20,8 @@ public class HTML {
 
     public static void MiniTutorial(PrintWriter out ) {
         out.println("<br/><h2>More about this skeleton and interesting Battlefield 2 links if you want to learn more.</h2>");
-        out.print("<p>Playing Battlefield 2 is a fun and engaging way to create data for your database (It is also an excellent game unlike modern BF-games... ;) ). Creating data has never been more fun! 38 tables waits for you to tinker with. Invite friends over and have a LAN. " +
-                  "With this you can make stats profile for players and round histories and overall stats for your game server. Be creative: create leaderboards for teamwork, kills with attack helicopters or find out who is the top 10 most accurate with a sniper rifle. You can also insert or update tables, like what promotions, weapon unlocks or points a player has or what his email or country is.</p>");
+        out.print("<p>Playing Battlefield 2 is a fun and engaging way to create data for your database (It is also an excellent game unlike modern BF-games... ;) ). Creating test data for a DB has never been more fun! 38 tables waits for you to experiment with. Invite friends over and have a LAN or play alone. " +
+                  "With this you can make stats profile for players/bots and round histories and overall stats for your game server. Be creative: create leaderboards for teamwork, kills with attack helicopters or the top 10 most accurate with a sniper rifle. You can also create a site that inserts or update tables, like what promotions, weapon unlocks or points a player has or what his email or country is.</p>");
         out.println("<h3>Here is some bf2-stats sites you can use for inspiration of what to include: </h3>");
         out.println("<p><a href=\"https://www.bf2hub.com/player/Clubradio\">(bf2hub version)</a> </p>");
         out.println("<p><a href=\"https://stats.lost-soldiers.org/?pid=235450654\">(bf2s version)</a> </p>");
@@ -33,5 +33,6 @@ public class HTML {
         out.println("<p><a href=\"http://battlefieldsingleplayer.com/\">(battlefieldsingleplayer.com The forum is the StackOverload of BF2. Not very active nowadays, but you can find most answers through the search function)</a> </p>");
         out.println("<p><a href=\"https://discord.gg/eFcgYKfe\">(Refactor 2 modding. This Discord for modding BF2 and other Refactor-engine games like BF1942, Vietnam, and BF2142. Very active)</a> </p>");
         out.println("<p><a href=\"https://www.youtube.com/channel/UCcsNBmzJb8jdWHS7OCQPFKA/videos\">(my youtube channel. It has tutorials on how to customise and manage your private server and how to add new stuff from your modded BF2-version so the DB accepts it ;))</a> </p>");
+        out.println("<p><a href=\" https://github.com/orgs/BattlefieldRedux/repositories\">(A big list of random Battlefield 2 related github repositories.)</a> </p>");
     }
 }
