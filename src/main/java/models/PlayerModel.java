@@ -1,5 +1,6 @@
 package models;
 
+//This is just a small start to get you started. It misses most of the columns from the player table.
 public class PlayerModel {
     private String nickname;
     private int score;
@@ -8,7 +9,7 @@ public class PlayerModel {
     private int deaths;
     private int captures;
 
-    //Just a basic start. It misses many columns that is saved the player table.
+
     public PlayerModel(String nickname, int score, int roundsPlayed, int kills, int deaths, int captures) {
         this.nickname = nickname;
         this.score = score;

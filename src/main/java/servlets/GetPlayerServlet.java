@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import utilities.HTML;
 import models.PlayerModel;
 import utilities.DBUtils;
+import utilities.HTML;
 
 @WebServlet(name = "GetPlayerServlet", value = "/GetPlayerServlet")
 public class GetPlayerServlet extends HttpServlet {
